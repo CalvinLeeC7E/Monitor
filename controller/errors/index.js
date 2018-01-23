@@ -12,6 +12,16 @@ class Errors {
     })
     ctx.response.status = 204
   }
+
+  static async list (ctx) {
+    let params = ctx.request.body
+    let page = params.page || 0
+    let pageSize = 50
+    let result = await Error.find({}).sort({create_at: -1}).skip(page * pageSize).limit(pageSize).exec((err, result) => {
+      return result
+    })
+    ctx.body = result
+  }
 }
 
 module.exports = Errors
