@@ -7,6 +7,7 @@ const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const session = require('koa-session2')
 const passport = require('./passport_config')
+const cors = require('koa2-cors')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -17,6 +18,7 @@ const errors = require('./routes/errors/index')
 onerror(app)
 
 // middlewares
+app.use(cors())
 app.use(session({key: "SESSIONID"}))
 app.use(bodyparser({
   enableTypes: ['json', 'form', 'text']
