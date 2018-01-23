@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action='/xauth/login' method='POST')
+    input(name='username')
+    input(name='password')
+    input(type='submit')
