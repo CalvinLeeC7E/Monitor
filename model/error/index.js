@@ -18,4 +18,4 @@ const schema = new Schema({
 
 schema.index({create_at: 1})
 
-module.exports = mongoose.model('Errors', schema)
+module.exports = mongoose.model('Error', schema)

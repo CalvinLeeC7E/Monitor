@@ -14,4 +14,4 @@ mongoose.connect(config.get('db'), {
 })
 
 exports.User = require('./users/user')
-exports.Errors = require('./errors/index')
+exports.Error = require('./error/index')

@@ -11,6 +11,7 @@ const passport = require('./passport_config')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const xauth = require('./routes/xauth')
+const errors = require('./routes/errors/index')
 
 // error handler
 onerror(app)
@@ -42,5 +43,6 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(xauth.routes(), xauth.allowedMethods())
+app.use(errors.routes(), errors.allowedMethods())
 
 module.exports = app
