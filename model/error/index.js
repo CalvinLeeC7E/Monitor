@@ -10,6 +10,8 @@ const schema = new Schema({
   info: String,
   ip: String,
   accId: Number,
+  ua: String,
+  token: String,
   create_at: {
     type: Date,
     default: Date.now

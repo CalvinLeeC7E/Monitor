@@ -8,6 +8,8 @@ class Errors {
     error.message = params.message
     error.stack = params.stack
     error.info = params.info
+    error.ua = params.ua
+    error.token = params.token
     error.save(() => {
     })
     ctx.response.status = 204
