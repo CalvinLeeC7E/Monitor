@@ -10,6 +10,7 @@ class Errors {
     error.info = params.info
     error.ua = params.ua
     error.token = params.token
+    error.extraMess = params.extraMess
     error.save(() => {
     })
     ctx.response.status = 204

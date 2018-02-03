@@ -12,6 +12,7 @@ const schema = new Schema({
   accId: Number,
   ua: String,
   token: String,
+  extraMess: Object,
   create_at: {
     type: Date,
     default: Date.now
